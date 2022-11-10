@@ -11,17 +11,6 @@ import java.util.Optional;
 public class EmployeeRepository implements GenericRepository<Employee> {
     private final List<Employee> database = new ArrayList<>();
 
-    public EmployeeRepository() {
-        Employee employee01 = new Employee();
-        employee01.setId(1L);
-        employee01.setName("Fulano");
-        Employee employee02 = new Employee();
-        employee02.setId(2L);
-        employee02.setName("Beltrano");
-        this.database.add(employee01);
-        this.database.add(employee02);
-    }
-
     @Override
     public List<Employee> findAll() {
         return this.database;
